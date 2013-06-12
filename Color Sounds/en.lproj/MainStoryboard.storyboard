@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZW5-bw-qCp">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="7rM-4b-qu8">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="ZW5-bw-qCp" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G68-np-NEh">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xwd-qp-ROn" kind="relationship" relationship="rootViewController" id="0NH-mY-RjH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="09Q-Kr-lcv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="242"/>
+        </scene>
+        <!--View Controller - Camera-->
+        <scene sceneID="tyL-Mq-cmv">
+            <objects>
+                <viewController id="xwd-qp-ROn" customClass="WSViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hK9-b2-VdU">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9n-fJ-9N1">
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="iaG-2E-4wb"/>
+                                    <barButtonItem width="200" systemItem="camera" id="aUg-f9-evo">
+                                        <connections>
+                                            <action selector="captureImage:" destination="xwd-qp-ROn" id="yeC-id-gLc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="q7t-y7-6zW"/>
+                                    <barButtonItem style="plain" id="FN7-10-pQd">
+                                        <switch key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="GlA-iK-1y5">
+                                            <rect key="frame" x="229" y="9" width="79" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="switchChagned:forEvent:" destination="xwd-qp-ROn" eventType="valueChanged" id="qrR-pw-RVc"/>
+                                            </connections>
+                                        </switch>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etc-T5-lGV"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O9n-fJ-9N1" firstAttribute="leading" secondItem="hK9-b2-VdU" secondAttribute="leading" type="default" id="1mL-9K-t6l"/>
+                            <constraint firstItem="etc-T5-lGV" firstAttribute="top" secondItem="hK9-b2-VdU" secondAttribute="top" type="default" id="3Fo-OS-gUG"/>
+                            <constraint firstItem="O9n-fJ-9N1" firstAttribute="trailing" secondItem="hK9-b2-VdU" secondAttribute="trailing" type="default" id="B2L-5b-ytG"/>
+                            <constraint firstItem="etc-T5-lGV" firstAttribute="leading" secondItem="hK9-b2-VdU" secondAttribute="leading" type="default" id="a70-xt-JlS"/>
+                            <constraint firstItem="O9n-fJ-9N1" firstAttribute="bottom" secondItem="hK9-b2-VdU" secondAttribute="bottom" type="default" id="atC-Pm-uFc"/>
+                            <constraint firstItem="O9n-fJ-9N1" firstAttribute="top" secondItem="etc-T5-lGV" secondAttribute="bottom" type="default" id="jcF-u9-B3n"/>
+                            <constraint firstItem="etc-T5-lGV" firstAttribute="trailing" secondItem="hK9-b2-VdU" secondAttribute="trailing" type="default" id="vup-IJ-eBI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Camera" id="okm-x0-BFU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="C8h-Ko-kzc">
+                            <connections>
+                                <segue destination="dd3-er-QXt" kind="push" identifier="Setting" id="Loi-VJ-NBn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cameraButton" destination="aUg-f9-evo" id="WqY-UG-mZQ"/>
+                        <outlet property="cameraImageView" destination="etc-T5-lGV" id="Kae-R6-lVV"/>
+                        <outlet property="cl2soundSwitch" destination="GlA-iK-1y5" id="3JH-9H-xM3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u5R-03-5nv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="yXa-Uz-lnl" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="571" y="242"/>
+        </scene>
+        <!--Setting View Controller - Setting-->
+        <scene sceneID="9Rq-CM-baA">
+            <objects>
+                <viewController id="dd3-er-QXt" customClass="WSSettingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hSX-8W-PV5">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Setting" id="Llx-h5-XW5">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="Mxq-3g-l30">
+                            <connections>
+                                <segue destination="yXa-Uz-lnl" kind="unwind" identifier="Back" unwindAction="firstViewReturnActionForSegue:" id="jLK-OZ-gFJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h6V-qQ-YSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="242"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UIStoryboardSegue" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
+        </class>
+        <class className="WSSettingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WSSettingViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="firstViewReturnActionForSegue:" candidateClass="UIStoryboardSegue"/>
+            </relationships>
+        </class>
+        <class className="WSViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WSViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="captureImage:"/>
+                <relationship kind="action" name="firstViewReturnActionForSegue:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="switchChagned:forEvent:"/>
+                <relationship kind="outlet" name="cameraButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="cameraImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="cl2soundSwitch" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
