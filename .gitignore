@@ -24,3 +24,9 @@ Icon
 *~
 *.swp
 
+# AppCode
+.idea
+.idea/*.*
+
+# Instruments
+*.trace

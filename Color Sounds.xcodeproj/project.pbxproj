@@ -23,6 +23,9 @@
 		AB69931417672C840081C88B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB6992EF17672C840081C88B /* Foundation.framework */; };
 		AB69931C17672C840081C88B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB69931A17672C840081C88B /* InfoPlist.strings */; };
 		AB69931F17672C840081C88B /* Color_SoundsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB69931E17672C840081C88B /* Color_SoundsTests.m */; };
+		ABA7C421176EA59600357526 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA7C41E176EA59600357526 /* AudioToolbox.framework */; };
+		ABA7C422176EA59600357526 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA7C41F176EA59600357526 /* CoreMedia.framework */; };
+		ABA7C423176EA59600357526 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA7C420176EA59600357526 /* CoreVideo.framework */; };
 		ABCBAA43176806FA00D12271 /* WSSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCBAA42176806FA00D12271 /* WSSettingViewController.m */; };
 		ABE749C31768666B00287641 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE749BF1768666B00287641 /* Accelerate.framework */; };
 		ABE749C41768666B00287641 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE749C01768666B00287641 /* AVFoundation.framework */; };
@@ -65,6 +68,9 @@
 		AB69931B17672C840081C88B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AB69931D17672C840081C88B /* Color_SoundsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Color_SoundsTests.h; sourceTree = "<group>"; };
 		AB69931E17672C840081C88B /* Color_SoundsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Color_SoundsTests.m; sourceTree = "<group>"; };
+		ABA7C41E176EA59600357526 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		ABA7C41F176EA59600357526 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		ABA7C420176EA59600357526 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		ABCBAA41176806FA00D12271 /* WSSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSettingViewController.h; sourceTree = "<group>"; };
 		ABCBAA42176806FA00D12271 /* WSSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSettingViewController.m; sourceTree = "<group>"; };
 		ABE749BF1768666B00287641 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -80,6 +86,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABA7C421176EA59600357526 /* AudioToolbox.framework in Frameworks */,
+				ABA7C422176EA59600357526 /* CoreMedia.framework in Frameworks */,
+				ABA7C423176EA59600357526 /* CoreVideo.framework in Frameworks */,
 				ABE749C31768666B00287641 /* Accelerate.framework in Frameworks */,
 				ABE749C41768666B00287641 /* AVFoundation.framework in Frameworks */,
 				ABE749C51768666B00287641 /* CoreAudio.framework in Frameworks */,
@@ -127,6 +136,9 @@
 		AB6992EC17672C840081C88B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ABA7C41E176EA59600357526 /* AudioToolbox.framework */,
+				ABA7C41F176EA59600357526 /* CoreMedia.framework */,
+				ABA7C420176EA59600357526 /* CoreVideo.framework */,
 				ABE749BF1768666B00287641 /* Accelerate.framework */,
 				ABE749C01768666B00287641 /* AVFoundation.framework */,
 				ABE749C11768666B00287641 /* CoreAudio.framework */,

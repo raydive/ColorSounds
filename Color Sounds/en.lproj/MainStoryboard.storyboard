@@ -30,7 +30,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9n-fJ-9N1">
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="iaG-2E-4wb"/>
-                                    <barButtonItem width="200" systemItem="camera" id="aUg-f9-evo">
+                                    <barButtonItem width="400" systemItem="camera" id="aUg-f9-evo">
                                         <connections>
                                             <action selector="captureImage:" destination="xwd-qp-ROn" id="yeC-id-gLc"/>
                                         </connections>
@@ -41,23 +41,28 @@
                                             <rect key="frame" x="229" y="9" width="79" height="27"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <connections>
-                                                <action selector="switchChagned:forEvent:" destination="xwd-qp-ROn" eventType="valueChanged" id="qrR-pw-RVc"/>
+                                                <action selector="switchChaigned:forEvent:" destination="xwd-qp-ROn" eventType="valueChanged" id="dwl-KX-sg8"/>
                                             </connections>
                                         </switch>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etc-T5-lGV"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0c-pW-s86">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="O9n-fJ-9N1" firstAttribute="leading" secondItem="hK9-b2-VdU" secondAttribute="leading" type="default" id="1mL-9K-t6l"/>
-                            <constraint firstItem="etc-T5-lGV" firstAttribute="top" secondItem="hK9-b2-VdU" secondAttribute="top" type="default" id="3Fo-OS-gUG"/>
-                            <constraint firstItem="O9n-fJ-9N1" firstAttribute="trailing" secondItem="hK9-b2-VdU" secondAttribute="trailing" type="default" id="B2L-5b-ytG"/>
-                            <constraint firstItem="etc-T5-lGV" firstAttribute="leading" secondItem="hK9-b2-VdU" secondAttribute="leading" type="default" id="a70-xt-JlS"/>
-                            <constraint firstItem="O9n-fJ-9N1" firstAttribute="bottom" secondItem="hK9-b2-VdU" secondAttribute="bottom" type="default" id="atC-Pm-uFc"/>
-                            <constraint firstItem="O9n-fJ-9N1" firstAttribute="top" secondItem="etc-T5-lGV" secondAttribute="bottom" type="default" id="jcF-u9-B3n"/>
-                            <constraint firstItem="etc-T5-lGV" firstAttribute="trailing" secondItem="hK9-b2-VdU" secondAttribute="trailing" type="default" id="vup-IJ-eBI"/>
+                            <constraint firstItem="O9n-fJ-9N1" firstAttribute="bottom" secondItem="hK9-b2-VdU" secondAttribute="bottom" type="default" id="8Ix-Fc-EV4"/>
+                            <constraint firstItem="O9n-fJ-9N1" firstAttribute="trailing" secondItem="hK9-b2-VdU" secondAttribute="trailing" type="default" id="PaY-2o-7zG"/>
+                            <constraint firstItem="f0c-pW-s86" firstAttribute="trailing" secondItem="hK9-b2-VdU" secondAttribute="trailing" type="default" id="eTE-fK-PLa"/>
+                            <constraint firstItem="f0c-pW-s86" firstAttribute="leading" secondItem="hK9-b2-VdU" secondAttribute="leading" type="default" id="k3k-2y-hPx"/>
+                            <constraint firstItem="f0c-pW-s86" firstAttribute="top" secondItem="hK9-b2-VdU" secondAttribute="top" type="default" id="keP-Ce-p6z"/>
+                            <constraint firstItem="O9n-fJ-9N1" firstAttribute="leading" secondItem="hK9-b2-VdU" secondAttribute="leading" type="default" id="r6d-Cm-bRJ"/>
+                            <constraint firstItem="O9n-fJ-9N1" firstAttribute="top" secondItem="f0c-pW-s86" secondAttribute="bottom" type="default" id="yoa-p0-EYl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Camera" id="okm-x0-BFU">
@@ -68,9 +73,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cameraButton" destination="aUg-f9-evo" id="WqY-UG-mZQ"/>
-                        <outlet property="cameraImageView" destination="etc-T5-lGV" id="Kae-R6-lVV"/>
+                        <outlet property="cameraButton" destination="aUg-f9-evo" id="YUD-qd-WhG"/>
+                        <outlet property="cameraImageView" destination="f0c-pW-s86" id="egG-pW-Z7S"/>
                         <outlet property="cl2soundSwitch" destination="GlA-iK-1y5" id="3JH-9H-xM3"/>
+                        <outlet property="rootView" destination="hK9-b2-VdU" id="nQt-cz-YbJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u5R-03-5nv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -85,7 +91,7 @@
                     <view key="view" contentMode="scaleToFill" id="hSX-8W-PV5">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Setting" id="Llx-h5-XW5">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Mxq-3g-l30">
@@ -116,12 +122,12 @@
         <class className="WSViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WSViewController.h"/>
             <relationships>
-                <relationship kind="action" name="captureImage:"/>
                 <relationship kind="action" name="firstViewReturnActionForSegue:" candidateClass="UIStoryboardSegue"/>
-                <relationship kind="action" name="switchChagned:forEvent:"/>
+                <relationship kind="action" name="switchChaigned:forEvent:"/>
                 <relationship kind="outlet" name="cameraButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="cameraImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="cameraImageView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="cl2soundSwitch" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="rootView" candidateClass="UIView"/>
             </relationships>
         </class>
     </classes>
