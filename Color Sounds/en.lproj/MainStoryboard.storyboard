@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZW5-bw-qCp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4457.6" systemVersion="13A476u" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZW5-bw-qCp">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3682.6"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="7rM-4b-qu8">
             <objects>
                 <navigationController definesPresentationContext="YES" id="ZW5-bw-qCp" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G68-np-NEh">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -28,6 +31,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9n-fJ-9N1">
+                                <rect key="frame" x="0.0" y="460" width="320" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="iaG-2E-4wb"/>
                                     <barButtonItem width="400" systemItem="camera" id="aUg-f9-evo">
@@ -48,6 +52,7 @@
                                 </items>
                             </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0c-pW-s86">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="YES"/>
@@ -65,8 +70,9 @@
                             <constraint firstItem="O9n-fJ-9N1" firstAttribute="top" secondItem="f0c-pW-s86" secondAttribute="bottom" type="default" id="yoa-p0-EYl"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Camera" id="okm-x0-BFU">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="C8h-Ko-kzc">
+                        <barButtonItem key="rightBarButtonItem" title="Setting" id="C8h-Ko-kzc">
                             <connections>
                                 <segue destination="dd3-er-QXt" kind="push" identifier="Setting" id="Loi-VJ-NBn"/>
                             </connections>
@@ -93,6 +99,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Setting" id="Llx-h5-XW5">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Mxq-3g-l30">
                             <connections>

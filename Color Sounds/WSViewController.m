@@ -148,7 +148,8 @@
 /*!
     メロディを流すために使用
  */
-- (IBAction)switchChaigned:(id)sender forEvent:(UIEvent *)event {
+- (IBAction)switchChaigned:(id)sender
+                  forEvent:(UIEvent *)event {
     NSLog(@"Switch Changed!");
 }
 
@@ -156,9 +157,12 @@
 #pragma mark -
 #pragma mark <AVCaptureVideoDataOutputSampleBufferDelegate>
 
-- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection
+- (void)captureOutput:(AVCaptureOutput *)captureOutput
+didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
+       fromConnection:(AVCaptureConnection *)connection
 {
     // TODO: キャプチャされた画像
+    NSLog(@"captureOutput called");
 }
 
 @end
